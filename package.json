@@ -18,5 +18,14 @@
     "helmet": "^8.2.0",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.7.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgeEmilioMX/api-financiera.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JorgeEmilioMX/api-financiera/issues"
+  },
+  "homepage": "https://github.com/JorgeEmilioMX/api-financiera#readme"
 }
