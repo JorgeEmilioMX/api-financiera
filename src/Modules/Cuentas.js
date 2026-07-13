@@ -5,7 +5,6 @@ const CuentaSchema = new mongoose.Schema({
         type: String,
         required: [true, 'El nombre del titular es obligatorio'],
     },
-    
     numeroCuenta: {
         encryptedData: { 
             type: String, 
@@ -26,6 +25,8 @@ const CuentaSchema = new mongoose.Schema({
         min: [0, 'El saldo no puede ser negativo'], // Regla de integridad financiera
         default: 0
     }
+}, {
+    timestamps: true // Registra automáticamente createdAt y updatedAt
 });
 
 module.exports = mongoose.model('Cuenta', CuentaSchema);
