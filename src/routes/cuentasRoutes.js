@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const cuentasController = require('../controllers/cuentasController');
+const authMiddleware = require('../middleware/authMiddleware'); // ← AGREGAR
 
 // Rutas de Cuentas Financieras
-router.post('/', cuentasController.crearCuenta);       // Crear una cuenta nueva
-router.get('/', cuentasController.obtenerCuentas);     // Consultar listado de cuentas
+router.post('/', authMiddleware, cuentasController.crearCuenta);     // ← agregar authMiddleware
+router.get('/', authMiddleware, cuentasController.obtenerCuentas);   // ← agregar authMiddleware
 
 module.exports = router;
